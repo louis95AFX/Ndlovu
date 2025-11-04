@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ndlovukhazi - Luxury Candles Collection</title>
+    <title>Lee's Reflective Scents</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css"> 
@@ -11,9 +11,11 @@
 <body>
 
     <header class="main-header">
-        <div class="logo">NDLOVUKHAZI.</div>
+        <div class="logo">Lee's Reflective Scents</div>
         <nav class="nav-links">
-            <a href="index.html">Home</a>
+        <a href="index.html">Home</a>
+        <a href="diffusers.html">Crafts and Diffusers</a>
+        <a href="decor.html">Home Décor</a>
         </nav>
     </header>
 
@@ -26,44 +28,54 @@
         </section>
 
         <section class="content-section" style="padding: 60px 5%;">
-            <div class="product-grid">
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="item1.jpg" alt="Signature Black Jar Candle" class="product-img" />
-                    </div>
-                    <p class="product-name">Signature Black Jar - Sandalwood</p>
-                    <p class="product-price">R550</p>
-                    <button class="view-details-btn">View Details</button>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="item14.jpg" alt="Limited Edition Ceramic Candle" class="product-img" />
-                    </div>
-                    <p class="product-name">Ceramic Collection - White Tea</p>
-                    <p class="product-price">R690</p>
-                    <button class="view-details-btn">View Details</button>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="item13.jpg" alt="Travel Tin Candle Set" class="product-img" />
-                    </div>
-                    <p class="product-name">Travel Tin Set (3 Pack)</p>
-                    <p class="product-price">R480</p>
-                    <button class="view-details-btn">View Details</button>
-                </div>
+        <div class="product-grid" id="productGrid">
+            
+            <div class="product-card" data-page="1">
+                <div class="product-image"><img src="item1.jpg" alt="Signature Black Jar Candle" class="product-img" /></div>
+                <p class="product-name"></p>
+                <p class="product-price">R550</p>
+                <button class="view-details-btn">View Details</button>
             </div>
             
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="#" class="cta-link">
-                    <button class="cta-button" style="background-color: var(--accent-color); border-color: var(--accent-color);">
-                        See All 15 Scents
-                    </button>
-                </a>
+            <div class="product-card" data-page="1">
+                <div class="product-image"><img src="item14.jpg" alt="Limited Edition Ceramic Candle" class="product-img" /></div>
+                <p class="product-name"></p>
+                <p class="product-price">R690</p>
+                <button class="view-details-btn">View Details</button>
             </div>
-        </section>
+            
+            <div class="product-card" data-page="1">
+                <div class="product-image"><img src="item13.jpg" alt="Travel Tin Candle Set" class="product-img" /></div>
+                <p class="product-name"></p>
+                <p class="product-price">R480</p>
+                <button class="view-details-btn">View Details</button>
+            </div>
+            
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item56.jpg" alt="Product 4" class="product-img" /></div><p class="product-name"></p><p class="product-price">R300</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item55.jpg" alt="Product 5" class="product-img" /></div><p class="product-name"></p><p class="product-price">300</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item7.jpg" alt="Product 6" class="product-img" /></div><p class="product-name"></p><p class="product-price">R590</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item23.jpg" alt="Product 7" class="product-img" /></div><p class="product-name"></p><p class="product-price">R550</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item29.jpg" alt="Product 8" class="product-img" /></div><p class="product-name"></p><p class="product-price">R530</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item52.jpg" alt="Product 9" class="product-img" /></div><p class="product-name"></p><p class="product-price">R510</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item11.jpg" alt="Product 10" class="product-img" /></div><p class="product-name"></p><p class="product-price">R560</p><button class="view-details-btn">View Details</button></div>
+            
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item57.jpg" alt="Product 11" class="product-img" /></div><p class="product-name"></p><p class="product-price">R540</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item13.jpg" alt="Product 12" class="product-img" /></div><p class="product-name"></p><p class="product-price">R570</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item14.jpg" alt="Product 13" class="product-img" /></div><p class="product-name"></p><p class="product-price">R500</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item60.jpg" alt="Product 14" class="product-img" /></div><p class="product-name"></p><p class="product-price">R610</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item61.jpg" alt="Product 15" class="product-img" /></div><p class="product-name"></p><p class="product-price">R550</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item74.jpg" alt="Product 16" class="product-img" /></div><p class="product-name"></p><p class="product-price">R580</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item75.jpg" alt="Product 17" class="product-img" /></div><p class="product-name"></p><p class="product-price">R620</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item20.jpg" alt="Product 18" class="product-img" /></div><p class="product-name"></p><p class="product-price">R150</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item21.jpg" alt="Product 19" class="product-img" /></div><p class="product-name"></p><p class="product-price">R560</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item22.jpg" alt="Product 20" class="product-img" /></div><p class="product-name"></p><p class="product-price">R590</p><button class="view-details-btn">View Details</button></div>
+            
+        </div>
+        
+        <div class="pagination-controls" id="paginationControls">
+            </div>
+
+    </section>
         
     </main>
 
@@ -81,12 +93,12 @@
                 <a href="#">FAQs</a>
                 <a href="#">Contact Us</a>
                 <p class="contact-info">
-                    📞 Ndlovukhazi Orders: <a href="tel:0769713346">076 971 3346</a><br>
+                    📞 Ndlovukazi Orders: <a href="tel:0769713346">076 971 3346</a><br>
                 </p>
             </div>
             <div class="footer-col">
                 <p class="col-title">COMPANY</p>
-                <a href="index.html#about-us">About Ndlovukhazi</a>
+                <a href="index.html#about-us">About Ndlovukazi</a>
                 <a href="#">Wholesale Enquiries</a>
                 <a href="#">Privacy Policy</a>
             </div>
@@ -101,7 +113,7 @@
                 </div>
             </div>
         </div>
-        <p class="copyright">&copy; 2025 NDLOVUKHAZI. All Rights Reserved.</p>
+        <p class="copyright">&copy; 2025 NDLOVUKAZI. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>

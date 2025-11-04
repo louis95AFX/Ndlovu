@@ -1,0 +1,567 @@
+/* General Reset and Typography */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #f7e8ee; /* Soft blush/cream for contrast */
+    --accent-color: #a8794c; /* Gold/Bronze for luxury details */
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--secondary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Header and Navigation */
+.main-header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.nav-links a {
+    color: var(--text-light);
+    margin-left: 25px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section (Includes previous size fix) */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 5%;
+    background-color: var(--secondary-color);
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.hero-image-placeholder {
+    flex: 1;
+    max-width: 50%;
+    max-height: 500px;
+    overflow: hidden; 
+}
+
+.hero-image-placeholder .product-img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: 2px solid var(--primary-color);
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* Section Styling */
+section {
+    padding: 80px 5%;
+}
+
+.section-heading {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Artist Bio Section (Updated for Founder) */
+.artist-bio-container {
+    display: flex;
+    justify-content: center;
+}
+
+.founder-card {
+    max-width: 800px;
+    text-align: center;
+    padding: 40px;
+    background-color: var(--text-light);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.founder-photo-placeholder {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--accent-color);
+}
+
+.founder-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.founder-name {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.founder-title {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.founder-bio {
+    font-size: 1rem;
+    color: var(--text-dark);
+    text-align: left;
+}
+
+/* Vision/Promise Section */
+.vision-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.vision-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.vision-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.vision-text {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.learn-more {
+    color: var(--text-light);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.learn-more:hover {
+    color: var(--accent-color);
+}
+
+.vision-image {
+    flex: 1;
+    max-width: 45%;
+}
+
+.vision-img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.vision-caption {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+/* Featured Collection/Products */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: var(--text-light);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.product-image {
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.product-image .product-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 0; 
+}
+
+.product-card:hover .product-image .product-img {
+    transform: scale(1.05);
+}
+
+.product-name {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.product-price {
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.view-details-btn {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.view-details-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 50px 5% 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.footer-col {
+    width: 25%;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.col-title {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.footer-col a {
+    display: block;
+    color: #aaa;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.footer-col a:hover {
+    color: var(--text-light);
+}
+
+.contact-info {
+    margin-top: 20px;
+    line-height: 1.8;
+    font-size: 0.9rem;
+}
+
+.contact-info a {
+    display: inline;
+    color: var(--accent-color);
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.newsletter button {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 15px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 80%;
+    border-radius: 4px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons i {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    cursor: pointer;
+    color: var(--text-light);
+    transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: var(--accent-color);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+/* Shipping info styles (kept) */
+.shipping-info {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    text-align: center;
+    font-size: 0.95rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    transition: all 0.3s ease;
+}
+
+.shipping-info p { margin: 0; }
+
+.hidden { display: none; }
+
+#shipping-toggle {
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#shipping-toggle:hover {
+    color: #aaa;
+    text-decoration: underline;
+}
+
+.shipping-info:not(.hidden) { animation: fadeIn 0.4s ease; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .hero-image-placeholder {
+        max-width: 100%;
+        max-height: 400px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .vision-section {
+        flex-direction: column;
+    }
+
+    .vision-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .vision-image {
+        max-width: 100%;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
+
+    .footer-col {
+        min-width: 100%;
+        text-align: center;
+    }
+    
+    .newsletter input, .newsletter button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+    }
+
+    .nav-links a {
+        margin: 0 10px;
+        display: inline-block;
+    }
+}
+/* Vision/Promise Section */
+.vision-section {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    /* Enforcing a fixed max-height on the entire section itself helps control size */
+    max-height: 450px; 
+    overflow: hidden; /* Important: prevents content from spilling out if image is too large */
+}
+
+.vision-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.vision-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.vision-text {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.learn-more {
+    color: var(--text-light);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.learn-more:hover {
+    color: var(--accent-color);
+}
+
+.vision-image {
+    flex: 1;
+    max-width: 45%;
+    /* New: Setting a max-height on the container */
+    max-height: 400px; 
+    overflow: hidden;
+    display: flex; /* To easily center the image if needed */
+    flex-direction: column;
+    justify-content: center;
+}
+
+.vision-img {
+    width: 100%;
+    /* New: Ensure the image covers the container without distortion and respects max-height */
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+.vision-caption {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 10px;
+    color: #ccc;
+}
+/* End of Vision/Promise Section CSS updates */

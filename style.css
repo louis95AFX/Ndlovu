@@ -565,3 +565,53 @@ section {
     color: #ccc;
 }
 /* End of Vision/Promise Section CSS updates */
+
+/* --- Pagination & Product Grid Styles --- */
+
+/* Ensures the grid layout adapts for the visible cards */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Class to hide products not on the current page */
+.product-card.hidden {
+    display: none;
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.pagination-controls button {
+    background: transparent;
+    color: var(--text-color); /* Assuming text-color is a main font color */
+    border: 1px solid var(--text-color);
+    padding: 8px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Highlight the active page button */
+.pagination-controls button.active {
+    background-color: var(--primary-color); /* Assuming primary-color is the main brand color */
+    color: var(--secondary-color); /* Assuming secondary-color is a light background color */
+    border-color: var(--primary-color);
+    font-weight: bold;
+}
+
+.pagination-controls button:hover:not(.active) {
+    background-color: #eee; /* Light hover effect */
+}
+
+/* Style for prev/next icons (if using font-awesome) */
+.pagination-controls i {
+    pointer-events: none; /* Prevents icon click from interfering */
+}

@@ -7,79 +7,93 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css"> 
-</head>
+    </head>
 <body>
 
     <header class="main-header">
         <div class="logo">Lee's Reflective Scents</div>
         <nav class="nav-links">
             <a href="index.html">Home</a>
-                <a href="candles.html">Luxury Candles</a>
+            <a href="candles.html">Luxury Candles</a>
             <a href="diffusers.html">Crafts and Diffusers</a>
         </nav>
     </header>
 
-       
-
-        <main>
+    <main>
         <section class="page-hero" style="background-color: var(--primary-color); padding: 80px 5%; color: var(--text-light);">
             <h1 class="section-heading" style="margin-bottom: 20px; color: var(--accent-color);">HANDCRAFTED HOME DÉCOR</h1>
             <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
                 Each piece is meticulously crafted to be a timeless addition to your home. Discover our range of artisan vases, trays, and accents.
             </p>
         </section>
+        
+        <section class="search-section">
+            <div class="search-wrapper">
+                <input type="text" id="productSearch" placeholder="Search for a décor item..." onkeyup="filterProducts()">
+                <button type="button" class="search-button" onclick="filterProducts()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </section>
         <section class="content-section" style="padding: 60px 5%;">
         <div class="product-grid" id="productGrid">
             
             <div class="product-card" data-page="1">
                 <div class="product-image"><img src="item87.jpg" alt="Signature Black Jar Candle" class="product-img" /></div>
-                <p class="product-name"></p>
-                <p class="product-price">R550</p>
+                <p class="product-name">Minimalist Vase</p> <p class="product-price">R550</p>
                 <button class="view-details-btn">View Details</button>
             </div>
             
             <div class="product-card" data-page="1">
                 <div class="product-image"><img src="item88.jpg" alt="Limited Edition Ceramic Candle" class="product-img" /></div>
-                <p class="product-name"></p>
-                <p class="product-price">R690</p>
+                <p class="product-name">Rustic Tray</p> <p class="product-price">R690</p>
                 <button class="view-details-btn">View Details</button>
             </div>
             
             <div class="product-card" data-page="1">
                 <div class="product-image"><img src="item89.jpg" alt="Travel Tin Candle Set" class="product-img" /></div>
-                <p class="product-name"></p>
-                <p class="product-price">R480</p>
+                <p class="product-name">Geometric Accent</p> <p class="product-price">R480</p>
                 <button class="view-details-btn">View Details</button>
             </div>
             
-            <div class="product-card" data-page="1"><div class="product-image"><img src="item91.jpg" alt="Product 4" class="product-img" /></div><p class="product-name"></p><p class="product-price">R600</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="1"><div class="product-image"><img src="item90.jpg" alt="Product 5" class="product-img" /></div><p class="product-name"></p><p class="product-price">R520</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="1"><div class="product-image"><img src="item85.jpg" alt="Product 6" class="product-img" /></div><p class="product-name"></p><p class="product-price">R590</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="1"><div class="product-image"><img src="item96.jpg" alt="Product 7" class="product-img" /></div><p class="product-name"></p><p class="product-price">R550</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="1"><div class="product-image"><img src="item98.jpg" alt="Product 8" class="product-img" /></div><p class="product-name"></p><p class="product-price">R530</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="1"><div class="product-image"><img src="item99.jpg" alt="Product 9" class="product-img" /></div><p class="product-name"></p><p class="product-price">R510</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="1"><div class="product-image"><img src="item82.jpg" alt="Product 10" class="product-img" /></div><p class="product-name"></p><p class="product-price">R560</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item128.jpg" alt="Product 4" class="product-img" /></div><p class="product-name">2set thinking Sculpture with trinket tray </p><p class="product-price">R250</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item129.jpg" alt="Product 5" class="product-img" /></div><p class="product-name">Round vase set with thinking man </p><p class="product-price">R300</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item130.jpg" alt="Product 6" class="product-img" /></div><p class="product-name">3 set piece stripped vase jar & tray </p><p class="product-price">R300</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item131.jpg" alt="Product 7" class="product-img" /></div><p class="product-name">3 set stripped jar lotus flower holder n tray </p><p class="product-price">R300</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item132.jpg" alt="Product 8" class="product-img" /></div><p class="product-name">3 piece stripped candle jar lotus flower holder and tray </p><p class="product-price">R300</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item133.jpg" alt="Product 9" class="product-img" /></div><p class="product-name">Lotus flower /candle holder </p><p class="product-price">R100</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item134.jpg" alt="Product 10" class="product-img" /></div><p class="product-name">3 piece set stripped vase</p><p class="product-price">R300</p><button class="view-details-btn">View Details</button></div>
             
-            <div class="product-card" data-page="2"><div class="product-image"><img src="item30.jpg" alt="Product 11" class="product-img" /></div><p class="product-name"></p><p class="product-price">R540</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="2"><div class="product-image"><img src="item31.jpg" alt="Product 12" class="product-img" /></div><p class="product-name"></p><p class="product-price">R570</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="2"><div class="product-image"><img src="item32.jpg" alt="Product 13" class="product-img" /></div><p class="product-name"></p><p class="product-price">R500</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="2"><div class="product-image"><img src="item33.jpg" alt="Product 14" class="product-img" /></div><p class="product-name"></p><p class="product-price">R610</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="2"><div class="product-image"><img src="item34.jpg" alt="Product 15" class="product-img" /></div><p class="product-name"></p><p class="product-price">R550</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="2"><div class="product-image"><img src="item26.jpg" alt="Product 16" class="product-img" /></div><p class="product-name"></p><p class="product-price">R580</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="2"><div class="product-image"><img src="item27.jpg" alt="Product 17" class="product-img" /></div><p class="product-name"></p><p class="product-price">R620</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="2"><div class="product-image"><img src="item28.jpg" alt="Product 18" class="product-img" /></div><p class="product-name"></p><p class="product-price">R530</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="2"><div class="product-image"><img src="item25.jpg" alt="Product 19" class="product-img" /></div><p class="product-name"></p><p class="product-price">R560</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="2"><div class="product-image"><img src="item40.jpg" alt="Product 20" class="product-img" /></div><p class="product-name"></p><p class="product-price">R590</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item135.jpg" alt="Product 11" class="product-img" /></div><p class="product-name">Mouldin face vase</p><p class="product-price">R350</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item136.jpg" alt="Product 12" class="product-img" /></div><p class="product-name">Human set </p><p class="product-price">R150</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item137.jpg" alt="Product 13" class="product-img" /></div><p class="product-name">4 piece thinking angel</p><p class="product-price">R450</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item138.jpg" alt="Product 14" class="product-img" /></div><p class="product-name">3D Thinking human set</p><p class="product-price">R150</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item139.jpg" alt="Product 15" class="product-img" /></div><p class="product-name">Snail vase</p><p class="product-price">R200</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item140.jpg" alt="Product 16" class="product-img" /></div><p class="product-name">Lotus flower vase</p><p class="product-price">R150</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item141.jpg" alt="Product 17" class="product-img" /></div><p class="product-name">Abstract face vase</p><p class="product-price">R200</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item142.jpg" alt="Product 18" class="product-img" /></div><p class="product-name">Angel shush vase</p><p class="product-price">R90</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item143.jpg" alt="Product 19" class="product-img" /></div><p class="product-name">Set of trays </p><p class="product-price">R250</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item144.jpg" alt="Product 20" class="product-img" /></div><p class="product-name">sd</p><p class="product-price">R300</p><button class="view-details-btn">View Details</button></div>
             
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item145.jpg" alt="Product 11" class="product-img" /></div><p class="product-name">Flower Pot</p><p class="product-price">R100</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item146.jpg" alt="Product 12" class="product-img" /></div><p class="product-name">Womandla Vase</p><p class="product-price">R110</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item147.jpg" alt="Product 13" class="product-img" /></div><p class="product-name">Oval Vase & Tray</p><p class="product-price">R300</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item148.jpg" alt="Product 14" class="product-img" /></div><p class="product-name">Utray 3 set piece</p><p class="product-price">R450</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item149.jpg" alt="Product 15" class="product-img" /></div><p class="product-name">Seashell Tray </p><p class="product-price">R80</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item150.jpg" alt="Product 16" class="product-img" /></div><p class="product-name">Bubble Tray </p><p class="product-price">R70</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item151.jpg" alt="Product 17" class="product-img" /></div><p class="product-name">Linket vase</p><p class="product-price">R150</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item152.jpg" alt="Product 18" class="product-img" /></div><p class="product-name">Round vase</p><p class="product-price">R150</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item153.jpg" alt="Product 19" class="product-img" /></div><p class="product-name">Stripped long vase</p><p class="product-price">R400</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item154.jpg" alt="Product 20" class="product-img" /></div><p class="product-name">Stripped Jar & Lid </p><p class="product-price">R100</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item155.jpg" alt="Product 16" class="product-img" /></div><p class="product-name">Abstract face Vase & Tray</p><p class="product-price">R250</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item156.jpg" alt="Product 17" class="product-img" /></div><p class="product-name">3D holding hand</p><p class="product-price">R150</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item157.jpg" alt="Product 18" class="product-img" /></div><p class="product-name">Abstract face tray</p><p class="product-price">R90</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item158.jpg" alt="Product 19" class="product-img" /></div><p class="product-name">Oval Tray </p><p class="product-price">R90 Each</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item159.jpg" alt="Product 20" class="product-img" /></div><p class="product-name"></p>Utray concrete tray<p class="product-price">R150</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item160.jpg" alt="Product 20" class="product-img" /></div><p class="product-name">Thinking man set with heart jewelry holder and tray</p><p class="product-price">R250</p><button class="view-details-btn">View Details</button></div>
+
         </div>
         
-        <div class="pagination-controls" id="paginationControls">
-            </div>
-
-    </section>
-        
-    </main>
-
         <div class="pagination-controls" id="paginationControls">
             </div>
 
@@ -125,5 +139,29 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Ensure this script block is present or the function is in script.js
+        function filterProducts() {
+            const searchInput = document.getElementById('productSearch').value.toLowerCase();
+            const productCards = document.querySelectorAll('.product-card');
+
+            productCards.forEach(card => {
+                // IMPORTANT: Ensure your product names are correctly inside the <p class="product-name"></p> tags
+                const productNameElement = card.querySelector('.product-name');
+                const productName = productNameElement ? productNameElement.textContent.trim().toLowerCase() : '';
+
+                if (productName.includes(searchInput)) {
+                    card.style.display = ''; // Show the product card
+                } else {
+                    card.style.display = 'none'; // Hide the product card
+                }
+            });
+
+            // Call the function to re-run pagination after filtering
+            if (window.refreshPagination) {
+                window.refreshPagination();
+            }
+        }
+    </script>
 </body>
 </html>

@@ -26,54 +26,77 @@
                 Explore our signature range of hand-poured soy candles, featuring unique, long-lasting fragrances designed to elevate your personal space.
             </p>
         </section>
-
+        
+        <section class="search-section">
+            <div class="search-wrapper">
+                <input type="text" id="productSearch" placeholder="Search for your perfect candle..." onkeyup="filterProducts()">
+                <button type="button" class="search-button" onclick="filterProducts()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </section>
         <section class="content-section" style="padding: 60px 5%;">
         <div class="product-grid" id="productGrid">
             
             <div class="product-card" data-page="1">
                 <div class="product-image"><img src="item1.jpg" alt="Signature Black Jar Candle" class="product-img" /></div>
-                <p class="product-name"></p>Xmas Candle Set
+                <p class="product-name">Xmas Candle Set</p> 
                 <p class="product-price">R250</p>
                 <button class="view-details-btn">View Details</button>
             </div>
             
             <div class="product-card" data-page="1">
                 <div class="product-image"><img src="item14.jpg" alt="Limited Edition Ceramic Candle" class="product-img" /></div>
-                <p class="product-name"></p>Woven Mesh Heart
+                <p class="product-name">Woven Mesh Heart</p>
                 <p class="product-price">R120</p>
                 <button class="view-details-btn">View Details</button>
             </div>
             
             <div class="product-card" data-page="1">
                 <div class="product-image"><img src="item13.jpg" alt="Travel Tin Candle Set" class="product-img" /></div>
-                <p class="product-name"></p>Candle Jar & Flower Set
+                <p class="product-name">Candle Jar & Flower Set</p>
                 <p class="product-price">R300</p>
                 <button class="view-details-btn">View Details</button>
             </div>
             
-            <div class="product-card" data-page="1"><div class="product-image"><img src="item56.jpg" alt="Product 4" class="product-img" /></div><p class="product-name"></p>Bubble Candle Set<p class="product-price">R300</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="1"><div class="product-image"><img src="item55.jpg" alt="Product 5" class="product-img" /></div><p class="product-name"></p>Bubble Candle Set<p class="product-price">300</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="1"><div class="product-image"><img src="item7.jpg" alt="Product 6" class="product-img" /></div><p class="product-name"></p>Candle Flower Jar<p class="product-price">R150 Each</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="1"><div class="product-image"><img src="item23.jpg" alt="Product 7" class="product-img" /></div><p class="product-name"></p>Bubble Candle Set<p class="product-price">R300</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="1"><div class="product-image"><img src="item29.jpg" alt="Product 8" class="product-img" /></div><p class="product-name"></p>Bubble Candle Set(M)<p class="product-price">R300</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="1"><div class="product-image"><img src="item52.jpg" alt="Product 9" class="product-img" /></div><p class="product-name"></p>Bubble Tray Set<p class="product-price">R300</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item56.jpg" alt="Product 4" class="product-img" /></div><p class="product-name">Bubble Candle Set</p><p class="product-price">R300</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item55.jpg" alt="Product 5" class="product-img" /></div><p class="product-name">Bubble Candle Set</p><p class="product-price">300</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item7.jpg" alt="Product 6" class="product-img" /></div><p class="product-name">Candle Flower Jar</p><p class="product-price">R150 Each</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item23.jpg" alt="Product 7" class="product-img" /></div><p class="product-name">Bubble Candle Set</p><p class="product-price">R300</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item29.jpg" alt="Product 8" class="product-img" /></div><p class="product-name">Bubble Candle Set(M)</p><p class="product-price">R300</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="1"><div class="product-image"><img src="item52.jpg" alt="Product 9" class="product-img" /></div><p class="product-name">Bubble Tray Set</p><p class="product-price">R300</p><button class="view-details-btn">View Details</button></div>
             
-            <div class="product-card" data-page="2"><div class="product-image"><img src="item57.jpg" alt="Product 11" class="product-img" /></div><p class="product-name"></p>Candle Jar & Trinket tray<p class="product-price">R350</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="2"><div class="product-image"><img src="item60.jpg" alt="Product 14" class="product-img" /></div><p class="product-name"></p>Woven Mesh Heart<p class="product-price">R200</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="2"><div class="product-image"><img src="item61.jpg" alt="Product 15" class="product-img" /></div><p class="product-name"></p>Pillar Candle <p class="product-price">R250 set of 3</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="2"><div class="product-image"><img src="item74.jpg" alt="Product 16" class="product-img" /></div><p class="product-name"></p>Geometric Candle<p class="product-price">R200 set of 2</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="2"><div class="product-image"><img src="item75.jpg" alt="Product 17" class="product-img" /></div><p class="product-name"></p>Pear Candle<p class="product-price">R230</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="2"><div class="product-image"><img src="item20.jpg" alt="Product 18" class="product-img" /></div><p class="product-name"></p>Bubble candle set(s)<p class="product-price">R200</p><button class="view-details-btn">View Details</button></div>
-            <div class="product-card" data-page="2"><div class="product-image"><img src="item21.jpg" alt="Product 19" class="product-img" /></div><p class="product-name"></p>Christmas Tree Candle<p class="product-price">R120 Each</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item57.jpg" alt="Product 11" class="product-img" /></div><p class="product-name">Candle Jar & Trinket tray</p><p class="product-price">R350</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item60.jpg" alt="Product 14" class="product-img" /></div><p class="product-name">Woven Mesh Heart</p><p class="product-price">R200</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item61.jpg" alt="Product 15" class="product-img" /></div><p class="product-name">Pillar Candle</p><p class="product-price">R250 set of 3</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item74.jpg" alt="Product 16" class="product-img" /></div><p class="product-name">Geometric Candle</p><p class="product-price">R200 set of 2</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item75.jpg" alt="Product 17" class="product-img" /></div><p class="product-name">Pear Candle</p><p class="product-price">R230</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item20.jpg" alt="Product 18" class="product-img" /></div><p class="product-name">Bubble candle set(s)</p><p class="product-price">R200</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item21.jpg" alt="Product 19" class="product-img" /></div><p class="product-name">Christmas Tree Candle</p><p class="product-price">R120 Each</p><button class="view-details-btn">View Details</button></div>
             <div class="product-card" data-page="2"><div class="product-image"><img src="item22.jpg" alt="Product 20" class="product-img" /></div><p class="product-name"></p><p class="product-price">R590</p><button class="view-details-btn">View Details</button></div>
+            <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+            
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item113.jpg" alt="Product 14" class="product-img" /></div><p class="product-name">Pillar candles set of 3</p><p class="product-price">R250</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item114.jpg" alt="Product 15" class="product-img" /></div><p class="product-name">Teddy and heart combo</p><p class="product-price">R250</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item115.jpg" alt="Product 16" class="product-img" /></div><p class="product-name">Wool candle</p><p class="product-price">R80</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item116.jpg" alt="Product 17" class="product-img" /></div><p class="product-name">Arch candle</p><p class="product-price">R100</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item117.jpg" alt="Product 18" class="product-img" /></div><p class="product-name">Rose Ball Candle</p><p class="product-price">R80</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item118.jpg" alt="Product 19" class="product-img" /></div><p class="product-name">Pinned ball candle</p><p class="product-price">R80 Each</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item119.jpg" alt="Product 20" class="product-img" /></div><p class="product-name"></p>Geometric candle<p class="product-price">R100 Each</p><button class="view-details-btn">View Details</button></div>
+
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item120.jpg" alt="Product 11" class="product-img" /></div><p class="product-name">Pear shaped candle combo</p><p class="product-price">R180</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item121.jpg" alt="Product 14" class="product-img" /></div><p class="product-name">Christmas candle</p><p class="product-price">R70</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item122.jpg" alt="Product 15" class="product-img" /></div><p class="product-name">Universe candle</p><p class="product-price">R50</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item123.jpg" alt="Product 16" class="product-img" /></div><p class="product-name">Comb candle</p><p class="product-price">R120 set of 2</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item124.jpg" alt="Product 17" class="product-img" /></div><p class="product-name">Universal candle</p><p class="product-price">R70</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item125.jpg" alt="Product 18" class="product-img" /></div><p class="product-name">Love candle</p><p class="product-price">R80 Each</p><button class="view-details-btn">View Details</button></div>
+              <div class="product-card" data-page="2"><div class="product-image"><img src="item126.jpg" alt="Product 17" class="product-img" /></div><p class="product-name">Woven mesh heart</p><p class="product-price">R70</p><button class="view-details-btn">View Details</button></div>
+            <div class="product-card" data-page="2"><div class="product-image"><img src="item127.jpg" alt="Product 18" class="product-img" /></div><p class="product-name">Seashell candle</p><p class="product-price">R60 Each</p><button class="view-details-btn">View Details</button></div>
+            
             
         </div>
-        
-        <div class="pagination-controls" id="paginationControls">
-            </div>
-
+        <div class="pagination-controls" id="paginationControls"></div>
     </section>
-        
     </main>
 
     <footer class="main-footer" id="contact">
@@ -114,5 +137,22 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function filterProducts() {
+            const searchInput = document.getElementById('productSearch').value.toLowerCase();
+            const productCards = document.querySelectorAll('.product-card');
+
+            productCards.forEach(card => {
+                const productNameElement = card.querySelector('.product-name');
+                const productName = productNameElement ? productNameElement.textContent.trim().toLowerCase() : '';
+
+                if (productName.includes(searchInput)) {
+                    card.style.display = ''; 
+                } else {
+                    card.style.display = 'none'; 
+                }
+            });
+        }
+    </script>
 </body>
 </html>

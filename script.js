@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const productCards = document.querySelectorAll('.product-card');
     const paginationControls = document.getElementById('paginationControls');
-    const productsPerPage = 10;
+    const productsPerPage = 9;
     let currentPage = 1;
 
     // Calculate total number of pages needed

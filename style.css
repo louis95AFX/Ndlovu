@@ -680,3 +680,226 @@ section {
     font-size: 1.15rem;
     color: #333;
 }
+
+/* --- Add to Cart Button Styling --- */
+
+.add-to-cart-btn {
+    /* Basic Button Look and Feel */
+    background-color: #5d5d7e; /* A rich, reflective color (adjust to your brand) */
+    color: #ffffff; /* White text for contrast */
+    border: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    padding: 10px 20px;
+    
+    /* Typography */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Bold text for prominence */
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    /* Layout and Spacing */
+    width: 90%; /* Make it span almost the full width of the card */
+    margin-top: 15px;
+    cursor: pointer;
+    
+    /* Transition for Hover Effect */
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Hover Effect (Visual feedback when the user mouses over the button) */
+.add-to-cart-btn:hover {
+    background-color: #79799b; /* Slightly lighter shade on hover */
+    /* You might want a subtle lift or shrink effect */
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on lift */
+}
+
+/* Active/Clicked State (Visual feedback when the user presses the button) */
+.add-to-cart-btn:active {
+    background-color: #4a4a68; /* Slightly darker shade when clicked */
+    transform: translateY(0); /* "Press" the button down */
+    box-shadow: none;
+}
+
+/* Optional: Ensure buttons are positioned well inside the product card */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    padding-bottom: 20px; /* Add some space at the bottom */
+}
+/* --- Cart Sidebar and Overlay Styles --- */
+
+/* Overlay (Dark background behind the cart) */
+#cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Sidebar Container */
+#cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px; /* Adjust width as needed */
+    max-width: 90%; /* Responsive consideration for smaller screens */
+    height: 100%;
+    background-color: #ffffff; /* White background */
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.15);
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    
+    /* Initially hidden and moved off-screen */
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Class to show the sidebar */
+#cart-sidebar:not(.hidden) {
+    transform: translateX(0);
+}
+
+/* Utility Class to hide elements */
+.hidden {
+    display: none;
+}
+
+/* Cart Header */
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #5d5d7e;
+    line-height: 1;
+    padding: 5px;
+}
+
+/* Cart Items Area */
+.cart-items {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto; /* Allows scrolling if many items are added */
+}
+
+/* Cart Summary/Checkout Area */
+.cart-summary {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.cart-summary p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #5d5d7e; /* Primary brand color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #4a4a68;
+}
+
+.view-cart-btn {
+    background: none;
+    border: 1px solid #5d5d7e;
+    color: #5d5d7e;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-cart-btn:hover {
+    background-color: #f4f4f4;
+}
+
+/* --- Cart Item Row Styling for Alignment --- */
+
+.cart-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns items to the top (better for multi-line names) */
+    padding: 12px 0; /* Add vertical padding */
+    border-bottom: 1px dashed #eee;
+}
+
+.cart-item-row:last-child {
+    border-bottom: none; /* Clean up the last border */
+}
+
+.cart-item-info {
+    flex-grow: 1;
+    min-width: 0;
+    padding-right: 10px; /* Space between name/price and qty control */
+}
+
+.cart-item-name {
+    font-weight: 500;
+    display: block; /* Ensures name takes up full width */
+    margin-bottom: 5px;
+}
+
+.cart-item-price-tag {
+    color: #5d5d7e;
+    font-size: 0.9em;
+}
+
+.cart-qty-control {
+    display: flex;
+    align-items: center; /* Vertically centers the input and the subtotal */
+    white-space: nowrap; /* Prevents the price/qty from wrapping */
+}
+
+.cart-qty-input {
+    width: 40px;
+    text-align: center;
+    margin: 0 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box; /* Includes padding/border in the width calculation */
+}
+
+.cart-item-subtotal {
+    font-weight: 700;
+    color: #5d5d7e;
+    width: 70px;
+    text-align: right;
+    min-width: 70px; /* Ensures consistent alignment of price column */
+}

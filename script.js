@@ -86,3 +86,67 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- INITIALIZATION ---
     displayPage(1); // Load the first page when the site opens
 });
+
+// ======== Cart Functionality ========
+let cart = [];
+
+function updateCartDisplay() {
+    const container = document.getElementById('cartItemsContainer');
+    const subtotalElem = document.getElementById('cartSubtotal');
+
+    container.innerHTML = '';
+    let subtotal = 0;
+
+    cart.forEach((item, index) => {
+        subtotal += item.price * item.qty;
+
+        const itemDiv = document.createElement('div');
+        itemDiv.style.marginBottom = '10px';
+        itemDiv.innerHTML = `
+            ${item.name} - R${item.price} x 
+            <input type="number" min="1" value="${item.qty}" style="width:50px" onchange="updateQty(${index}, this.value)">
+            <button onclick="removeFromCart(${index})">Remove</button>
+        `;
+        container.appendChild(itemDiv);
+    });
+
+    subtotalElem.textContent = `Subtotal: R${subtotal}`;
+}
+
+function updateQty(index, qty) {
+    cart[index].qty = parseInt(qty);
+    updateCartDisplay();
+}
+
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCartDisplay();
+}
+
+// ======== Add to Cart Buttons ========
+document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const card = btn.closest('.product-card');
+        const name = card.querySelector('.product-name').textContent.trim();
+        const priceText = card.querySelector('.product-price').textContent.replace(/[^\d.]/g, '');
+        const price = parseFloat(priceText) || 0;
+
+        const existingItem = cart.find(item => item.name === name);
+        if (existingItem) {
+            existingItem.qty += 1;
+        } else {
+            cart.push({ name, price, qty: 1 });
+        }
+
+        updateCartDisplay();
+    });
+});
+
+// ======== Checkout Button ========
+document.getElementById('checkoutButton').addEventListener('click', () => {
+    if(cart.length === 0){
+        alert("Your cart is empty!");
+        return;
+    }
+    alert("Proceeding to checkout...");
+});
